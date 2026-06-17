@@ -13,6 +13,6 @@ porcentagem = float(input('Digite a porcentagem de gorjeta: % '))
 valor_da_gorjeta = calcular_gorjeta(conta, porcentagem)
 total = calcular_total(conta, valor_da_gorjeta)
 
-#4. Saída
+# 4. Saída
 print(f'\nValor da gorjeta: R$ {valor_da_gorjeta:.2f}')
 print(f'Total a pagar: R$ {total:.2f}')
