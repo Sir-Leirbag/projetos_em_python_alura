@@ -3,8 +3,7 @@ def valida_cpf(cpf):
         return('Erro: O CPF deve conter apenas números.')
     if len(cpf) != 11:
         return 'Erro: O CPF deve ter exatamente 11 dígitos.'
-    else:
-        return 'CPF válido.'
+    return 'CPF válido.'
 
 cpf = input('Digite seu CPF: ')
 
