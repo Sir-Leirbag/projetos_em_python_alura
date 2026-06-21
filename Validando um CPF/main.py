@@ -6,8 +6,7 @@ def primeiro_digito(cpf):
     resto = soma % 11
     if resto < 2:
         return 0
-    else:
-        return 11 - resto
+    return 11 - resto
 
 def segundo_digito(cpf):
     fatores = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2]
@@ -17,8 +16,7 @@ def segundo_digito(cpf):
     resto = soma % 11
     if resto < 2:
         return 0
-    else:
-        return 11 - resto
+    return 11 - resto
 
 def valida_cpf(cpf):
     if not cpf.isdigit():
