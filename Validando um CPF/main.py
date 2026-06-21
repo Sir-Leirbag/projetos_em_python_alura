@@ -1,14 +1,4 @@
-def primeiro_digito(cpf):
-    fatores = [10, 9, 8, 7, 6, 5, 4, 3, 2]
-    cpf_convertido = [int(digito) * fator for digito, fator in zip(cpf, fatores)]
-    soma = sum(cpf_convertido)
-    resto = soma % 11
-    if resto < 2:
-        return 0
-    return 11 - resto
-
-def segundo_digito(cpf):
-    fatores = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2]
+def calcula_digito(cpf, fatores):
     cpf_convertido = [int(digito) * fator for digito, fator in zip(cpf, fatores)]
     soma = sum(cpf_convertido)
     resto = soma % 11
@@ -23,7 +13,7 @@ def valida_cpf(cpf):
         return 'Erro: O CPF deve ter exatamente 11 dígitos.'
     if cpf == cpf[0] * 11:
         return 'Erro: CPF inválido.'
-    if int(cpf[9]) != primeiro_digito(cpf) or int(cpf[10]) != segundo_digito(cpf):
+    if int(cpf[9]) != calcula_digito(cpf, range(10, 1, -1)) or int(cpf[10]) != calcula_digito(cpf, range(11, 1, -1)):
         return 'Erro: CPF inválido.'
     return 'CPF válido.'
 
