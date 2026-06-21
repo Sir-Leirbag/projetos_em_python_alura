@@ -1,16 +1,16 @@
 # 1. Funções
-def converte_cpf(cpf):
-    return [int(item) for item in cpf]
-
-def verificar_elementos():
-    
+def separa_digitos(cpf):
+    return [int(d) for d in str(cpf)]
 
 # 2. Entrada de dados
-cpf = list(input('Digite seu CPF: '))
+try:
+    cpf = int(input('Digite seu CPF: '))
+except ValueError:
+    print('Digite apenas números')
+    quit()
 
 # 3. Processamento
-cpf_convertido = converte_cpf(cpf)
+digitos = separa_digitos(cpf)
 
-if len(cpf_convertido) != 11:
+if len(digitos) != 11:
     print('O CPF deve ter exatamente 11 dígitos.')
-elif 
