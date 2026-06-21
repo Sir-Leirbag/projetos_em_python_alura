@@ -1,18 +1,11 @@
-# 1. Funções
-def converte_cpf(cpf):
-    return [int(d) for d in list(cpf)]
+def valida_cpf(cpf):
+    if not cpf.isdigit():
+        return('Erro:O CPF deve conter apenas números.')
+    if len(cpf) != 11:
+        return 'O CPF deve ter exatamente 11 dígitos.'
+    else:
+        return 'CPF válido.'
 
-# 2. Entrada de dados
-cpf = list(input('Digite seu CPF: '))
+cpf = input('Digite seu CPF: ')
 
-# 3. Processamento
-try:
-    digitos = converte_cpf(cpf)
-except ValueError:
-    print('O CPF deve conter apenas números.')
-    quit()
-
-if len(digitos) != 11:
-    print('O CPF deve ter exatamente 11 dígitos.')
-else:
-    print('CPF válido.')
+print(valida_cpf(cpf))
