@@ -6,8 +6,9 @@ def seleciona_palavras(texto):
     return palavras_longas
 
 texto = input('Digite um texto: ')
+palavras_longas = (', '.join(seleciona_palavras(texto)))
 
-if seleciona_palavras(texto):
-    print(f'Palavras longas encontradas: {', '.join(seleciona_palavras(texto))}')
+if palavras_longas:
+    print(f'Palavras longas encontradas: {palavras_longas}')
 else:
     print('Nenhuma palavra longa foi encontrada no texto.')
