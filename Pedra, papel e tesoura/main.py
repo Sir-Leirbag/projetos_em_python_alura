@@ -5,30 +5,31 @@ def gerar_elemento():
     return random.choice(opcoes)
 
 def limpar_entrada(elemento):
-    elemento = elemento.islower()
+    return elemento.lower()
 
 elemento = input('Escolha: pedra, papel ou tesoura? ')
 jogada_computador = gerar_elemento()
+jogadada_usuario = limpar_entrada(elemento)
 
-if elemento == jogada_computador:
+if jogadada_usuario == jogada_computador:
     print(f'O computador escolheu: {jogada_computador}')
     print('Empate!')
-elif elemento == 'pedra' and jogada_computador == 'tesoura':
+elif jogadada_usuario == 'pedra' and jogada_computador == 'tesoura':
     print(f'O computador escolheu: {jogada_computador}')
     print('Você venceu!')
-elif elemento == 'pedra' and jogada_computador == 'papel':
+elif jogadada_usuario == 'pedra' and jogada_computador == 'papel':
     print(f'O computador escolheu: {jogada_computador}')
     print('O computador venceu!')
-elif elemento == 'papel' and jogada_computador == 'pedra':
+elif jogadada_usuario == 'papel' and jogada_computador == 'pedra':
     print(f'O computador escolheu: {jogada_computador}')
     print('Você venceu!')
-elif elemento == 'papel' and jogada_computador == 'tesoura':
+elif jogadada_usuario == 'papel' and jogada_computador == 'tesoura':
     print(f'O computador escolheu: {jogada_computador}')
     print('O computador venceu!')
-elif elemento == 'tesoura' and jogada_computador == 'papel':
+elif jogadada_usuario == 'tesoura' and jogada_computador == 'papel':
     print(f'O computador escolheu: {jogada_computador}')
     print('Você venceu!')
-elif elemento == 'tesoura' and jogada_computador == 'pedra':
+elif jogadada_usuario == 'tesoura' and jogada_computador == 'pedra':
     print(f'O computador escolheu: {jogada_computador}')
     print('O computador venceu!')
 else:
