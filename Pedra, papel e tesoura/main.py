@@ -1,6 +1,6 @@
 import random
 
-opcoes = ['pedra', 'papel', 'tesoura']
+opcoes = ('pedra', 'papel', 'tesoura')
 
 def gerar_elemento():
     return random.choice(opcoes)
