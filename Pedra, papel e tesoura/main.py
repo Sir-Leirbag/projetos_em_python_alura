@@ -4,12 +4,9 @@ def gerar_elemento():
     opcoes = ['pedra', 'papel', 'tesoura']
     return random.choice(opcoes)
 
-def limpar_entrada(elemento):
-    return elemento.strip().lower()
-
 elemento = input('Escolha: pedra, papel ou tesoura? ')
 jogada_computador = gerar_elemento()
-jogada_usuario = limpar_entrada(elemento)
+jogada_usuario = elemento.strip().lower()
 
 if jogada_usuario == jogada_computador:
     print(f'O computador escolheu: {jogada_computador}')
