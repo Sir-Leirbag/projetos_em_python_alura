@@ -13,7 +13,7 @@ while True:
         print('Entrada inválida: Digite apenas números.')
         continue
     tentativas += 1
-    if 1 > numero > 100:
+    if numero < 1 or numero > 100:
         print('Entrada inválida: Número fora do intervalo! Digite um número entre 1 e 100.')
     elif numero > numero_aleatorio:
         print(f'Muito alto! Tente novamente: {numero}')
