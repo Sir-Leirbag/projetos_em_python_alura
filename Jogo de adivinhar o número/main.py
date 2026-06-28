@@ -12,13 +12,16 @@ while True:
     except ValueError:
         print('Entrada inválida: Digite apenas números.')
         continue
-    tentativas += 1
     if numero < 1 or numero > 100:
         print('Entrada inválida: Número fora do intervalo! Digite um número entre 1 e 100.')
+        continue
     elif numero > numero_aleatorio:
         print(f'Muito alto! Tente novamente: {numero}')
+        tentativas += 1
     elif numero < numero_aleatorio:
         print(f'Muito baixo! Tente novamente: {numero}')
+        tentativas += 1
     else:
+        tentativas += 1
         print(f'Parabéns! Você acertou o número: {numero} com {tentativas} tentativas.')
         break
