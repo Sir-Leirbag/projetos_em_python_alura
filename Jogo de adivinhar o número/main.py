@@ -1,10 +1,10 @@
 import random
 
 def gerar_numero_aleatorio():
-    return random.randint(1,101)
+    return random.randint(1,100)
 
 def comparar_numero(numero):
-    if numero < 0 or numero > 100:
+    if numero < 1 or numero > 100:
         print('Entrada inválida: Número fora do intervalo! Digite um número entre 1 e 100.')
         main()
     elif numero > numero_aleatorio:
