@@ -10,10 +10,6 @@ def remover_tarefa(tarefa_removida):
     tarefa_removida = input('\nDigite a tarefa que será removida: ')
     lista_de_tarefas.remove(tarefa_removida)
 
-
-'''def sair():
-    return quit()'''
-
 lista_de_tarefas = []
 
 def main():
