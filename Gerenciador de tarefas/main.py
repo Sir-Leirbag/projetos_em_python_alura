@@ -1,5 +1,3 @@
-import os
-
 def adicionar_tarefa(tarefa_adicionada):
     tarefa_adicionada = input('\nDigite a tarefa que deseja adicionar: ')
     lista_de_tarefas.append(tarefa_adicionada)
