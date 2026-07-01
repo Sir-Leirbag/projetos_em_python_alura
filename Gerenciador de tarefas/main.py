@@ -23,7 +23,10 @@ def remover_tarefa(tarefa_removida):
             print('Erro: Entrada inválida! Digite um número.')
             continue
         except IndexError:
-            print(f'Erro: Opção inválida!')
+            if len(lista_de_tarefas) == 1:
+                print(f'Erro: Opção inválida! Apenas há 1 opção.')
+            if len(lista_de_tarefas) > 1:
+                print(f'Erro: Opção inválida! Escolha uma opcão entre 1 e {len(lista_de_tarefas)}')
             continue            
         break
 
