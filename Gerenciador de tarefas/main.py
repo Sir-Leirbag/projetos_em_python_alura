@@ -9,13 +9,16 @@ def visualizar_tarefas(lista_de_tarefas):
         print(f'{i}. {tarefa}')
 
 def remover_tarefa(tarefa_removida):
-    try:
-        tarefa_removida = int(input('\nDigite o número da tarefa a ser removida: '))
-    except ValueError:
-        print('Erro: Entrada inválida! Digite um número.')
+    while True:
+        try:
+            tarefa_removida = int(input('\nDigite o número da tarefa a ser removida: '))
+        except ValueError:
+            print('Erro: Entrada inválida! Digite um número.')
+            continue
         indice = tarefa_removida - 1
         tarefa_removida = lista_de_tarefas.pop(indice)    
         print(f'Tarefa {tarefa_removida} removida.')
+        break
 
 lista_de_tarefas = []
 
